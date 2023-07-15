@@ -41,7 +41,7 @@ section{
     padding: 0 80px;
     margin: auto;
 }
-.about, .services, .skills, .project, .contact, .price, footer{
+.about, .services, .skills, .project, .testimony, .contact, .price, footer{
     font-family: 'Poppins', sans-serif;
 }
 .about .about-content,
@@ -224,30 +224,35 @@ section .title::after{
 .about .title::after{
     content: "who i am";
 }
-.about .about-content .left{
+
+/* .about .about-content .left{
     width: 45%;
-}
-.about .about-content .left img{
+} */
+/* .about .about-content .left img{
     height: 400px;
     width: 400px;
     object-fit: cover;
     border-radius: 6px;
+} */
+.about .about-content {
+    justify-content: center;
+    width: 100%;
 }
-.about .about-content .right{
-    width: 55%;
+.about .about-content .column{
+    width: 65%;
 }
-.about .about-content .right .text{
+.about .about-content .text{
     font-size: 25px;
     font-weight: 600;
     margin-bottom: 10px;
 }
-.about .about-content .right .text span{
+.about .about-content .text span{
     color: var(--primary);
 }
-.about .about-content .right p{
+.about .about-content  p{
     text-align: justify;
 }
-.about .about-content .right a{
+.about .about-content a{
     display: inline-block;
     background: var(--primary);
     color: #fff;
@@ -259,7 +264,7 @@ section .title::after{
     border: 2px solid var(--primary);
     transition: all 0.3s ease;
 }
-.about .about-content .right a:hover{
+.about .about-content a:hover{
     color: var(--primary);
     background: none;
 }
@@ -378,19 +383,19 @@ section .title::after{
     top: 0;
     background: var(--primary);
 }
-.skills-content .right .html::before{
+.skills-content .right .premier::before{
     width: 90%;
 }
-.skills-content .right .css::before{
+.skills-content .right .after::before{
     width: 60%;
 }
-.skills-content .right .js::before{
+.skills-content .right .vinci::before{
     width: 80%;
 }
-.skills-content .right .php::before{
+.skills-content .right .photoshop::before{
     width: 50%;
 }
-.skills-content .right .mysql::before{
+.skills-content .right .lightroom::before{
     width: 70%;
 }
 
@@ -457,9 +462,55 @@ section .title::after{
     background: var(--primary)!important;
 }
 /* ############################################################################################ */
-
+/* testimony part */
 .testimony{}
+.testimony .title::after{
+    content: "What people says";
+}
+.testimony .carousel .card{
+    background: #222;
+    border-radius: 6px;
+    padding: 25px 35px;
+    text-align: center;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    color: #fff;
+}
+.testimony .carousel .card:hover{
+    background: var(--primary);
+}
+.testimony .carousel .card .box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+.testimony .carousel .card .box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+.testimony .carousel .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+.testimony .carousel .card img{
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid var(--primary);
+    transition: all 0.3s ease;
+}
+.testimony .carousel .card:hover img{
+    border-color: #fff;
+}
 
+/* price part */
 .price{
 
 }
@@ -571,7 +622,7 @@ section .title::after{
     font-style: none;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 3em;
-    
+
 }
 .price .price-content .card span .price-num::before{
     content: '$';
@@ -586,7 +637,7 @@ section .title::after{
     font-size: .5em;
     bottom: 0;
     color: var(--primary);
-    
+
 }
 
 
@@ -730,10 +781,10 @@ footer span a:hover{
 
 /* responsive media query start */
 @media (max-width: 1104px) {
-    .about .about-content .left img{
+    /* .about .about-content .left img{
         height: 350px;
         width: 350px;
-    }
+    } */
 }
 
 @media (max-width: 991px) {
@@ -784,17 +835,17 @@ footer span a:hover{
     .max-width{
         max-width: 930px;
     }
-    .about .about-content .column{
+    /* .about .about-content .column{
         width: 100%;
     }
     .about .about-content .left{
         display: flex;
         justify-content: center;
         margin: 0 auto 60px;
-    }
-    .about .about-content .right{
+    } */
+    /* .about .about-content {
         flex: 100%;
-    }
+    } */
     .services .serv-content .card{
         width: calc(50% - 10px);
         margin-bottom: 20px;
@@ -802,6 +853,10 @@ footer span a:hover{
     .price .price-content .card{
       width: calc(50% - 10px);
         margin-bottom: 20px;
+    }
+    .about .about-content .column{
+        width: 100%;
+        margin-bottom: 35px;
     }
     .skills .skills-content .column,
     .contact .contact-content .column{
@@ -838,7 +893,7 @@ footer span a:hover{
     .home .home-content .text-3{
         font-size: 27px;
     }
-    .about .about-content .right .text,
+    .about .about-content .text,
     .skills .skills-content .left .text{
         font-size: 19px;
     }
