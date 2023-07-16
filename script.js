@@ -1,4 +1,5 @@
 $(document).ready(function(){
+
   $(window).scroll(function(){
       // sticky navbar on scroll script
       if(this.scrollY > 20){
@@ -35,14 +36,14 @@ $(document).ready(function(){
 
   // typing text animation script
   var typed = new Typed(".typing", {
-      strings: ["YouTuber", "Developer", "Blogger", "Designer", "Freelancer"],
+      strings: ["Instagram", "Vlog", "Film", "Freelancer"],
       typeSpeed: 100,
       backSpeed: 60,
       loop: true
   });
 
   var typed = new Typed(".typing-2", {
-      strings: ["YouTuber", "Developer", "Blogger", "Designer", "Freelancer"],
+      strings: ["Instagram", "Vlog", "Film", "Freelancer"],
       typeSpeed: 100,
       backSpeed: 60,
       loop: true
@@ -71,3 +72,24 @@ $(document).ready(function(){
       }
   });
 });
+
+
+function toggle(){
+    let horizontal = document.getElementById('horizontal')
+    let vertical = document.getElementById('vertical')
+
+    // vertical.style.display = "flex"
+    // horizontal.style. = "none";
+    let checkbox = document.getElementById('price-toggle');
+    let pan_input = document.getElementById('pan-input');
+    if (checkbox.checked) {
+       vertical.style.display = "flex";
+       horizontal.style.display = "none"
+    } else {
+       vertical.style.display = "none";
+       horizontal.style.display = "flex"
+    }
+ }
+
+
+

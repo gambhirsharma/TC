@@ -20,7 +20,8 @@
     </div>
     <nav class="navbar">
         <div class="max-width">
-            <div class="logo"><a href="#">Tracer<span> Production</span></a></div>
+            <!-- <div class="logo"><a href="#">Tracer<span>Production</span></a></div> -->
+            <div class="logo"><a href="#">Tracer Production</a></div>
             <ul class="menu">
                 <li><a href="#home" class="menu-btn">Home</a></li>
                 <!-- <li><a href="#about" class="menu-btn">About</a></li> -->
@@ -40,10 +41,11 @@
     <section class="home" id="home">
         <div class="max-width">
             <div class="home-content">
-                <div class="text-1">Hello, we are</div>
+                <!-- <div class="text-1">Hello, we are</div> -->
                 <div class="text-2">Best
                   Video Editing for</div>
-                <div class="text-3">We provide <span class="typing"></span></div>
+                <!-- <div class="text-3">We provide <span class="typing"></span></div> -->
+                <div class="text-3"><span class="typing"></span></div>
                 <a href="#">Hire us</a>
             </div>
         </div>
@@ -160,7 +162,15 @@
         <div class="max-width">
             <h2 class="title">Projects</h2>
             <!-- <div class="carousel owl-carousel"> -->
-                <div class="carousel owl-carousel">
+                <!-- <div class="carousel owl-carousel"> -->
+                    <div class="project-div">
+                <div class="card">
+                    <div class="box">
+                        <img src="images/profile-1.jpeg" alt="">
+                        <div class="text">lorem ipsum</div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
                 <div class="card">
                     <div class="box">
                         <img src="images/profile-1.jpeg" alt="">
@@ -257,12 +267,12 @@
         <div class="toggle-div">
           <span>Horizontal</span>
           <label class="switch">
-           <input type="checkbox">
+           <input type="checkbox" id="price-toggle" onchange="toggle()">
             <span class="slider"></span>
           </label>
           <span>Vertical</span>
         </div>
-        <div class="price-content horizontal">
+        <div class="price-content horizontal-videos" id="horizontal">
           <!-- first card -->
           <div class="card">
             <div class="box">
@@ -301,7 +311,7 @@
       </div> 
     </div>
     <!-- vertical section -->
-    <div class="price-content vertical">
+    <div class="price-content vertical-videos"id="vertical">
         <!-- first card -->
         <div class="card">
           <div class="box">
