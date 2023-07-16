@@ -92,4 +92,18 @@ function toggle(){
  }
 
 
+ function moreBtn() {
+   
+    var moreText = document.getElementById("video-include-more");
+    var btnText = document.getElementById("moreBtn");
+  
+    if (moreText.style.display === "none") {
+      btnText.innerHTML = "Less"; 
+      moreText.style.display = "inline";
+    } else {
+      btnText.innerHTML = "More"; 
+      moreText.style.display = "none";
+    }
+  }
+
 

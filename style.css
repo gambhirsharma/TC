@@ -1,8 +1,7 @@
 /*  import google fonts */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Kalam&family=Lugrasimo&family=Pangolin&family=Tektur&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Kalam&family=Lugrasimo&family=Pangolin&family=Tektur&display=swap");
 
 * {
   margin: 0;
@@ -11,11 +10,11 @@
   text-decoration: none;
 
   /* ############ ##### primary color section ############ #####  */
-/* --primary: crimson; */
+  /* --primary: crimson; */
   --primary: #008000;
-/* --primary: blue; */
-/* --primary: ; */
-/* --primary: ; */
+  /* --primary: blue; */
+  /* --primary: ; */
+  /* --primary: ; */
 
   --blk-bg: #111;
 
@@ -27,11 +26,11 @@
   /* --font-4: ; */
 
   /* Title Font */
-  --TP-font1: 'Lugrasimo', cursive;
-  --TP-font2: 'Anton', sans-serif;
-  --TP-font3:'Kalam', cursive ;
-  --TP-font4: 'Pangolin', cursive;
-  --TP-font5: 'Tektur', cursive;
+  --TP-font1: "Lugrasimo", cursive;
+  --TP-font2: "Anton", sans-serif;
+  --TP-font3: "Kalam", cursive;
+  --TP-font4: "Pangolin", cursive;
+  --TP-font5: "Tektur", cursive;
   /* --TP-font: ; */
 
   /* 
@@ -140,7 +139,7 @@ section .title::after {
   justify-content: space-between;
 }
 .navbar .logo a {
- font-family: var(--TP-font5); /* 1-5 */
+  font-family: var(--TP-font5); /* 1-5 */
   color: #fff;
   font-size: 35px;
   font-weight: 600;
@@ -709,6 +708,80 @@ section .title::after {
 .price .vertical-videos {
   display: none;
 }
+
+.price .video-include {
+  padding: 30px 0px 0px 0px;
+  margin: 50px 0px 0px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: solid #222;
+  border-width: 2px 0px 0px 0px;
+  color: #888;
+  /* background-color: red; */
+}
+.price .video-include span{
+    font-size: 2.4rem;
+    font-family: var(--font);
+}
+.price .video-include-container{
+    margin: 10px 0px 0px 0px;
+    display: flex;
+    flex-direction: column;
+}
+/* .price .video-include-container .video-include-left, .price .video-include-container .video-include-right{
+    margin: 20px;
+} */
+.price .video-include-container ul li{
+    margin: 10px;
+    display: flex;
+    padding: 10px;
+    /* background-color: #555; */
+    color: #888;
+    width: 100%;
+    font-size: 1.5em;
+    border: solid #3c3c3c;
+    border-width: 0px 0px 1px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+.price .video-include-container ul li::before{
+    content: '\2713\0020';
+    color: var(--primary);
+    display: flex;
+    position: relative;
+    left: -10px;
+}
+.price .video-include .video-include-container ul li:last-child{
+    border: 0;
+}
+
+.price .video-include .video-include-container .video-include-more{
+    display: none;
+}
+
+.price .video-include .video-include-button{
+    display: inline-block;
+    background: var(--primary);
+    color: #fff;
+    font-size: 25px;
+    padding: 12px 36px;
+    margin-top: 20px;
+    font-weight: 400;
+    border-radius: 6px;
+    border: 2px solid var(--primary);
+    transition: all 0.3s ease;
+    margin: auto;
+    top: 0; bottom: 0; left: 0; right: 0;
+}
+.price .video-include .video-include-button:hover{
+    background-color: transparent;
+    border: solid 2px var(--primary);
+    cursor: pointer;
+}
+
 /* ######################################################################################### */
 
 /* contact section styling */
