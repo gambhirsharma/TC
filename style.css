@@ -729,6 +729,7 @@ section .title::after {
     margin: 10px 0px 0px 0px;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 /* .price .video-include-container .video-include-left, .price .video-include-container .video-include-right{
     margin: 20px;
@@ -741,8 +742,8 @@ section .title::after {
     color: #888;
     width: 100%;
     font-size: 1.5em;
-    border: solid #3c3c3c;
-    border-width: 0px 0px 1px 0px;
+    /* border: solid #3c3c3c;
+    border-width: 0px 0px 1px 0px; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -755,7 +756,7 @@ section .title::after {
     left: -10px;
 }
 .price .video-include .video-include-container ul li:last-child{
-    border: 0;
+    border-width: 0px;
 }
 
 .price .video-include .video-include-container .video-include-more{
@@ -765,6 +766,7 @@ section .title::after {
 .price .video-include .video-include-button{
     display: inline-block;
     background: var(--primary);
+   
     color: #fff;
     font-size: 25px;
     padding: 12px 36px;
@@ -776,6 +778,17 @@ section .title::after {
     margin: auto;
     top: 0; bottom: 0; left: 0; right: 0;
 }
+/* .price .video-include .video-include-button::after{
+  content: '';
+  background-color: red;
+  display: flex;
+  left: 0;
+  right: 0;
+  top: 1px;
+  margin: auto;
+  width: 100%;
+  height: 5px;
+} */
 .price .video-include .video-include-button:hover{
     background-color: transparent;
     border: solid 2px var(--primary);
