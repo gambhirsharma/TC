@@ -450,9 +450,9 @@ section .title::after {
   content: "who with me";
 }
 .project .project-div {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 .project .project-div .vertical-sec{
   /* display: flex;
