@@ -451,17 +451,40 @@ section .title::after {
 }
 .project .project-div {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 25px;
 }
+.project .project-div .vertical-sec{
+  /* display: flex;
+  justify-content: space-between;   */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  /* place-content: center; */
+  gap: 10px;
+  min-height: 320px;
+}
+
+.project .project-div .vertical-sec .card{
+   
+}
+
+.project .project-div .horizontal-sec{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
 .project .card {
   background: #222;
   border-radius: 6px;
-  padding: 25px 35px;
-  text-align: center;
+  /* padding: 25px 35px; */
+  /* text-align: center; */
   overflow: hidden;
   transition: all 0.3s ease;
   max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .project .card:hover {
   background: var(--primary);
@@ -481,6 +504,10 @@ section .title::after {
   font-weight: 500;
   margin: 10px 0 7px 0;
 }
+.project iframe .ytp-title-text {
+ display: none!important;
+}
+
 .project .card img {
   height: 150px;
   width: 150px;
@@ -937,6 +964,10 @@ footer span a:hover {
   .max-width {
     padding: 0 50px;
   }
+  .project .project-div .vertical-sec{
+   
+    grid-template-columns: 1fr 1fr 1fr ;
+  }
 }
 @media (max-width: 947px) {
   .menu-btn {
@@ -1009,6 +1040,10 @@ footer span a:hover {
     width: 100%;
     margin-bottom: 35px;
   }
+  .project .project-div .vertical-sec,
+  .project .project-div .horizontal-sec{
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media (max-width: 690px) {
@@ -1029,6 +1064,10 @@ footer span a:hover {
   }
   .price .price-content .card {
     width: 100%;
+  }
+  .project .project-div .vertical-sec,
+  .project .project-div .horizontal-sec{
+    grid-template-columns: 1fr;
   }
 }
 

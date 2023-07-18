@@ -92,21 +92,21 @@ function toggle(){
  }
 
 
- function moreBtn() {
+//  function moreBtn() {
    
-    var moreText = document.getElementById("video-include-more");
-    var btnText = document.getElementById("moreBtn");
-    var LastdefaultView = document.getElementById("last");
+//     var moreText = document.getElementById("video-include-more");
+//     var btnText = document.getElementById("moreBtn");
+//     var LastdefaultView = document.getElementById("last");
   
-    if (moreText.style.display === "none") {
-      btnText.innerHTML = "Less"; 
-      moreText.style.display = "inline";
+//     if (moreText.style.display === "none") {
+//       btnText.innerHTML = "Less"; 
+//       moreText.style.display = "inline";
       
-    } else {
-      btnText.innerHTML = "More"; 
-      moreText.style.display = "none";
-    //   LastdefaultView.style.borderWidth = "0px 0px 2px 0px";
-    }
-  }
+//     } else {
+//       btnText.innerHTML = "More"; 
+//       moreText.style.display = "none";
+//     //   LastdefaultView.style.borderWidth = "0px 0px 2px 0px";
+//     }
+//   }
 
 
