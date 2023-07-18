@@ -306,21 +306,25 @@ section .title::after {
 }
 
 /* services section styling */
-.services,
+/* .services, */
 .project,
 .price {
   color: #fff;
   background: var(--blk-bg);
 }
-.services .title::before,
+/* .services .title::before, */
 .project .title::before,
 .price .title::before {
   background: #fff;
 }
-.services .title::after,
+/* .services .title::after, */
 .project .title::after,
+.price .title::after,
 .price .title::after {
   background: var(--blk-bg);
+  content: "what we provide";
+}
+.services .title::after{
   content: "what we provide";
 }
 .services .serv-content{
@@ -335,6 +339,7 @@ section .title::after {
   padding: 50px 25px;
   cursor: pointer;
   transition: all 0.3s ease;
+  color: #fff;
 }
 .services .serv-content .card .card-img {
   margin: auto;
@@ -416,7 +421,7 @@ section .title::after {
   background: lightgrey;
   position: relative;
 }
-.skills .skills-content .right .line::before {
+.skills .skills-content .right .line::before  {
   content: "";
   position: absolute;
   height: 100%;
@@ -560,8 +565,7 @@ section .title::after {
 }
 
 /* price part */
-.price {
-}
+
 .price .toggle-div {
   width: 100%;
   display: flex;
@@ -803,7 +807,15 @@ section .title::after {
 
 /* contact section styling */
 .contact .title::after {
+  background-color: #111;
   content: "get in touch";
+}
+.contact .title::before{
+  background-color: #fff;
+}
+.contact {
+  background-color: #111;
+  color: #fff;
 }
 .contact .contact-content .column {
   width: calc(50% - 30px);
@@ -902,6 +914,8 @@ footer {
   padding: 15px 23px;
   color: #fff;
   text-align: center;
+  border: solid  var(--primary);
+  border-width: 2px 0px 0px 0px;
 }
 footer span a {
   color: var(--primary);
