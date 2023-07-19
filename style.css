@@ -288,7 +288,7 @@ section .title::after {
 .about .about-content p {
   text-align: justify;
 }
-.about .about-content a {
+/* .about .about-content a {
   display: inline-block;
   background: var(--primary);
   color: #fff;
@@ -303,7 +303,62 @@ section .title::after {
 .about .about-content a:hover {
   color: var(--primary);
   background: none;
+} */
+
+/* about start */
+
+.about .about-content {
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
+.about .about-content .about-profile-div{
+  display: flex;
+}
+
+
+.about .about-profile-div .profile-card{
+  border: solid;
+  width: 35vmin;
+  height: 45vmin;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-direction: column;
+ margin: 25px 10px;
+ border-radius: 10px;
+ background-color: #222;
+ color: #fff;
+}
+.about .about-profile-div .profile-card img{
+  width: 75%;
+  height: 50%;
+  margin: 10px;
+  border-radius: 20px;
+}
+.about .about-profile-div .profile-card .social-div ul{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ list-style: none;
+}
+
+
+.about .profile-card .social-div li a svg{
+ font-size: 2rem;
+ fill: #fff;
+ margin: 10px;
+}
+.about .profile-card:hover{
+  background-color: #444;
+}
+.about .profile-card .social-div li a svg:hover{
+  fill: var(--primary);
+ }
+
+
+
+/* about end */
 
 /* services section styling */
 /* .services, */
@@ -655,18 +710,67 @@ section .title::after {
   transform: translateX(26px);
 }
 
-.price .price-content {
-}
 
 .price .price-content .card {
-  width: calc(33% - 20px);
+  /* width: calc(33% - 20px); */
+  width: 40vmin;
   background: #222;
   text-align: center;
   border-radius: 6px;
   padding: 50px 25px;
   cursor: pointer;
   transition: all 0.3s ease;
+  z-index: 2;
 }
+.price {
+  position: relative;
+}
+
+/* price detail part */
+/* .price .card-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  /* background-color: red; */
+  /* height: 75vmin;
+  width: 45vmin;
+} */
+/* .price .card-content .card-desc{
+  background-color: #444;
+  width: 45vmin;
+  height: 40%;
+  position: absolute;
+  border-radius: 10px;
+  bottom: 20vmin;
+}
+.price .card-content .card:hover ~ .card-desc{
+  bottom: 0vmin;
+  transition-delay: 0.2s;
+  transition : 0.3s ease-in-out;
+  background-color: #222;
+}
+.price .card-content .card:hover ~ .card-content{
+  height: 100vmin;
+}
+.price .card-desc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.price .card-desc ul li{
+  list-style: none;
+  font-size: .7em;
+  color: #888;
+}
+.price .card-desc ul li::before{
+  content: '\2713\0020';
+    color: var(--primary);
+  
+}*/
+    
+
+/* price detail end  */
 
 .price .price-content .card:hover {
   /* background: var(--primary); */
@@ -682,11 +786,11 @@ section .title::after {
   font-size: 3em;
 }
 .price .price-content .card .price-desc {
-  margin: 20px 0px;
+  margin: 10px 0px;
   color: #b6b6b6;
 }
 .price .price-content .card .price-disc {
-  margin: 20px 0px;
+  margin: 10px 0px;
   color: #b6b6b6;
 }
 .price .price-content .card span {
