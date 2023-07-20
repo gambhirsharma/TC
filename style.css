@@ -711,8 +711,8 @@ section .title::after {
 }
 
 .price .price-content .card {
-  /* width: calc(33% - 20px); */
-  width: 40vmin;
+  width: calc(33% - 20px);
+  /* width: 40vmin; */
   background: #222;
   text-align: center;
   border-radius: 6px;
