@@ -401,13 +401,12 @@ section .title::after {
 }
 .services .serv-content .card .card-img {
   margin: auto;
-  /* background-color: #333; */
+  background-color: #333;
   width: 100%;
   height: 300px;
 }
 .services .serv-content .card .card-img img{
-  height: 34vmin;
-  
+  height: 100%;
 }
 .services .serv-content .card:hover {
   background: var(--primary);
