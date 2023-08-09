@@ -263,7 +263,7 @@ section .title::after {
 
 /* about section styling */
 .about .title::after {
-  content: "who i am";
+  content: "who are we";
 }
 
 /* .about .about-content .left{
@@ -336,8 +336,10 @@ section .title::after {
   color: #fff;
 }
 .about .about-profile-div .profile-card img {
-  width: 72%;
-  height: 55%;
+  /* width: 72%;
+  height: 55%; */
+  width: 200px;
+
   margin: 10px;
   border: 4px solid white;
   border-radius: 50%;
@@ -605,7 +607,7 @@ section .title::after {
 .testimony {
 }
 .testimony .title::after {
-  content: "What people says";
+  content: "What all says";
 }
 .testimony .carousel .card {
   background: #222;
@@ -958,6 +960,9 @@ section .title::after {
   background-color: #111;
   color: #fff;
 }
+.contact .contact-content {
+  display: flex;
+}
 .contact .contact-content .column {
   width: calc(50% - 30px);
 }
@@ -1196,6 +1201,14 @@ footer span a:hover {
 }
 
 @media (max-width: 690px) {
+  .contact .contact-content {
+    display: flex;
+    flex-direction: column;
+  }
+  .contact .contact-content .column{
+    width: 100%;
+    padding: 0px 10px;
+  }
   .max-width {
     padding: 0 23px;
   }
