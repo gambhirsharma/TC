@@ -52,10 +52,11 @@ html {
   width: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  all: unset;
+  background: var(--blk-bg);
 }
 ::-webkit-scrollbar-thumb {
-  background: #888;
+  background: var(--primary);
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -1267,9 +1268,15 @@ footer span a:hover {
   .project .project-div .horizontal-sec {
     grid-template-columns: 1fr;
   }
+  .about-profile-pic{
+    width: 500px;
+  }
 }
 
 @media (max-width: 500px) {
+  .about-profile-pic{
+    width: 400px;
+  }
   .home .home-content .text-2 {
     font-size: 50px;
   }
@@ -1299,3 +1306,19 @@ footer span a:hover {
     line-height: 38px;
   }
 }
+@media (max-width: 1800px) {
+  .about-profile-pic{
+    width: 820px;
+  }}
+@media (max-width: 850px) {
+  .about-profile-pic{
+    width: 650px;
+  }}
+@media (max-width: 430px) {
+  .about-profile-pic{
+    width: 350px;
+  }}
+  @media (max-width: 300px) {
+    .about-profile-pic{
+      width: 250px;
+    }}
