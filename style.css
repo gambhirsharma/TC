@@ -378,6 +378,7 @@ section .title::after {
 
 /* services section styling */
 /* .services, */
+
 .project,
 .price {
   color: #fff;
@@ -675,7 +676,7 @@ section .title::after {
 }
 
 .testimony .star-div svg{
-  fill: gold;
+  fill: #FFD700;
   margin: 0px 2px;
 }
 .testimony .quote-icon-div{
@@ -689,12 +690,15 @@ section .title::after {
   transform: translate(0px,-20px);
 } */
 .testimony .quote-icon-div svg{
-  fill: white;
+  fill: #fff;
   font-size: 2rem;
 }
 
 /* price part */
-
+.price .more-btn-price{
+  all:unset;
+  right: 0;
+}
 .price .toggle-div {
   width: 100%;
   display: flex;
