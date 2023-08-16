@@ -14,6 +14,7 @@
   /* --primary: #008000; */
   /* --primary: blue; */
   --primary: #203BBB;
+  --primary-light: #04c0ff;
   /* --primary: ; */
 
   --blk-bg: #0e0d0d;
@@ -255,7 +256,7 @@ section .title::after {
 .home .home-content a {
   display: inline-block;
   background: var(--primary);
-  background-image: linear-gradient(to bottom right, #00C0FF, #090979);
+  background-image: linear-gradient(to bottom right, #008ab8, #090979);
   color: #fff;
   font-size: 25px;
   padding: 12px 36px;
@@ -879,7 +880,7 @@ section .title::after {
   position: absolute;
   font-size: 0.5em;
   left: -0.6em;
-  color: var(--primary);
+  color: var(--primary-light);
 }
 .price .price-content .card span .price-num::after {
   content: " /video";
@@ -1190,7 +1191,7 @@ footer span a:hover {
     .flip-card-front {
       background-color: #222;
       color: #fff;
-      padding: 15px 25px;
+      padding: 25px 25px;
     }
     .flip-card-back {
       background-color: #222;
@@ -1204,17 +1205,21 @@ footer span a:hover {
     }
     .flip-card button {
       all:unset;
-      background: var(--primary);
+      background: transparent;
       border-radius: 5px;
-      padding:0 6px;
+      padding:1px 16px;
       margin: 10px;
-      color: #fff;
+      color: #00C0FF;
       cursor: pointer;
-      border: 3px solid var(--primary);
+      font-size: 1.4em;
+      border: 1px solid #00C0FF;
+      transition: all 0.3s ease;
     }
     .flip-card button:hover{
-      background-color: transparent;
-      color: var(--primary);
+      background-color: var(--primary);
+      background: linear-gradient(to bottom right, #008ab8, #090979);
+      color: #fff;
+      border: solid 2px #222;
     }
     /* .flip-card-front button 
     .flip-card-front button{
@@ -1229,7 +1234,7 @@ footer span a:hover {
     .flip-card-front .front-btn-div{
       width: 100%;
       padding: 0px 10px;
-      display: flex; align-items: flex-end; justify-content: right;
+      display: flex; align-items: center; justify-content: center;
     }
     .flip-card-front h1{
       font-size: 2.5rem;
@@ -1259,12 +1264,31 @@ footer span a:hover {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 3em;
 }
+.price-total-cross-div{
+  width: 100%;
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .price-num-cross{
-  margin: 20px 0px 0px 0px;
+  margin: 20px 15px 0px 0px;
   text-decoration: line-through;
   position: relative;
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: #777;
+}
+.price-total{
+  margin: 20px 0px 0px 0px;
+  position: relative;
+  font-size: 2rem;
+  color: #fff;
+}
+.price-total::before {
+  content: "$";
+  position: relative;
+  font-size: 1em;
+  color: #fff;
 }
 .price-num-cross::before {
   content: "$";
@@ -1272,42 +1296,39 @@ footer span a:hover {
   font-size: 1em;
   color: #777;
 }
-.price-num-cross::after {
-  content: "";
-  position: relative;
-  font-size: 1em;
-  color: #777;
-}
+
 .flip-card-front span .price-num::before {
   content: "$";
   position: absolute;
   font-size: 0.5em;
   left: -0.6em;
-  color: var(--primary);
+  color: var(--primary-light);
 }
 .flip-card-front span .price-num::after {
   content: " /Video";
   position: absolute;
   font-size: 0.5em;
   bottom: 0;
-  color: var(--primary);
+  color: var(--primary-light);
 }
 .flip-card-front a {
   display: inline-block;
   background: var(--primary);
+  background-image: linear-gradient(to bottom right, #008ab8, #090979);
   color: #fff;
   font-size: 25px;
   padding: 12px 36px;
- margin: 0px;
+  margin-top: 20px;
   font-weight: 400;
   border-radius: 6px;
-  border: 2px solid var(--primary);
+  border: solid 2px #222;
   transition: all 0.3s ease;
 }
 
 .flip-card-front a:hover {
-  color: var(--primary);
+  color: #00C0FF;
   background: none;
+  border: solid 2px #04c0ff;
 }
 
 
