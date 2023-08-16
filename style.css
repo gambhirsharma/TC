@@ -11,9 +11,9 @@
 
   /* ############ ##### primary color section ############ #####  */
   /* --primary: crimson; */
-  --primary: #008000;
+  /* --primary: #008000; */
   /* --primary: blue; */
-  /* --primary: ; */
+  --primary: #203BBB;
   /* --primary: ; */
 
   --blk-bg: #0e0d0d;
@@ -61,11 +61,12 @@ html {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
-}
+} 
 
 /* body section */
 body{
   background-color: var(--white-bg);
+  /* background-image: radial-gradient( #00C0FF,#0073ff,#090979 ), radial-gradient(farthest-side,#00C0FF,#090979 ); */
 }
 
 /* all similar content styling codes */
@@ -97,6 +98,10 @@ footer {
   align-items: center;
   justify-content: space-between;
 }
+/* .services {
+  background: rgb(28,54,165);
+  background: linear-gradient(177deg, rgba(28,54,165,1) 0%, rgba(15,22,92,1) 94%, rgba(15,22,92,1) 100%);
+} */
 section .title {
   position: relative;
   text-align: center;
@@ -215,6 +220,7 @@ section .title::after {
 /* home section styling */
 .home {
   display: flex;
+  background-color: var(--blk-bg);
   background: url("images/Bg.jpg") no-repeat center;
   height: 100vh;
   color: #fff;
@@ -249,17 +255,18 @@ section .title::after {
 .home .home-content a {
   display: inline-block;
   background: var(--primary);
+  background-image: linear-gradient(to bottom right, #00C0FF, #090979);
   color: #fff;
   font-size: 25px;
   padding: 12px 36px;
   margin-top: 20px;
   font-weight: 400;
   border-radius: 6px;
-  border: 2px solid var(--primary);
+  border: 2px solid #00C0FF;
   transition: all 0.3s ease;
 }
 .home .home-content a:hover {
-  color: var(--primary);
+  color: #00C0FF;
   background: none;
 }
 
@@ -294,6 +301,7 @@ section .title::after {
   font-weight: 600;
   margin-bottom: 10px;
 }
+
 
 .about .about-content .text span {
   color: var(--primary);
@@ -551,7 +559,8 @@ section .title::after {
 }
 
 .project .card {
-  background: #222;
+  position: relative;
+  background: var(--blk-bg);
   border-radius: 6px;
   /* padding: 25px 35px; */
   /* text-align: center; */
@@ -561,10 +570,11 @@ section .title::after {
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
-.project .card:hover {
+/* .project .card:hover {
   background: var(--primary);
-}
+} */
 .project .card .box {
   display: flex;
   flex-direction: column;
@@ -583,8 +593,16 @@ section .title::after {
 .project iframe .ytp-title-text {
   display: none !important;
 }
-
-.project .card img {
+.project .card img{
+  position: absolute;
+  width: 130%;
+  height: auto;
+}
+.project .vertical-sec img{
+  width: auto;
+  height: 100%;
+}
+/* .project .card img {
   height: 150px;
   width: 150px;
   object-fit: cover;
@@ -594,7 +612,7 @@ section .title::after {
 }
 .project .card:hover img {
   border-color: #fff;
-}
+} */
 .owl-dots {
   text-align: center;
   margin-top: 20px;
@@ -890,9 +908,9 @@ section .title::after {
 
 /* horizontal - Vertical price section */
 
-.price .horizontal-videos {
-  /* display: none; */
-}
+/* .price .horizontal-videos {
+  
+} */
 .price .vertical-videos {
   display: none;
 }
@@ -1137,12 +1155,198 @@ footer span a:hover {
   text-decoration: underline;
 }
 
+
+    /* price card section ############################################################################*/
+    .flip-card {
+      background-color: transparent;
+      width: calc(33% - 20px);
+      height: 480px;
+      perspective: 1000px;
+      
+    }
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+    }
+    /* .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    } */
+
+    .flipedCard{
+      transform: rotateY(180deg);
+    }
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      border-radius: 5px;
+    }
+    .flip-card-front {
+      background-color: #222;
+      color: #fff;
+      padding: 15px 25px;
+    }
+    .flip-card-back {
+      background-color: #222;
+      color: #aaaaaa;
+      transform: rotateY(180deg);
+      padding: 15px;
+    }  
+    .flip-card-back li{
+      text-align: left;
+      list-style-type: circle;
+    }
+    .flip-card button {
+      all:unset;
+      background: var(--primary);
+      border-radius: 5px;
+      padding:0 6px;
+      margin: 10px;
+      color: #fff;
+      cursor: pointer;
+      border: 3px solid var(--primary);
+    }
+    .flip-card button:hover{
+      background-color: transparent;
+      color: var(--primary);
+    }
+    /* .flip-card-front button 
+    .flip-card-front button{
+      all:unset;
+      background: var(--primary);
+      border-radius: 5px;
+      padding:0px 6px;
+      margin: 10px;
+      color: #fff;
+      cursor: pointer;
+    } */
+    .flip-card-front .front-btn-div{
+      width: 100%;
+      padding: 0px 10px;
+      display: flex; align-items: flex-end; justify-content: right;
+    }
+    .flip-card-front h1{
+      font-size: 2.5rem;
+      margin: 0px 0px;
+    }
+    .price-disc {
+      margin: 10px 0px;
+      color: #b6b6b6;
+    }
+    .price-desc {
+      margin: 10px 0px;
+      color: #b6b6b6;
+    }
+
+.flip-card-front span {
+  display: block;
+  width: 100%;
+  border: solid #676767;
+  padding: 5px;
+  border-width: 2px 0px 2px 0px;
+  /* background-color: #1a1a1a; */
+}
+
+.flip-card-front span .price-num {
+  position: relative;
+  font-style: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3em;
+}
+.price-num-cross{
+  margin: 20px 0px 0px 0px;
+  text-decoration: line-through;
+  position: relative;
+  font-size: 2rem;
+  color: #777;
+}
+.price-num-cross::before {
+  content: "$";
+  position: relative;
+  font-size: 1em;
+  color: #777;
+}
+.price-num-cross::after {
+  content: "";
+  position: relative;
+  font-size: 1em;
+  color: #777;
+}
+.flip-card-front span .price-num::before {
+  content: "$";
+  position: absolute;
+  font-size: 0.5em;
+  left: -0.6em;
+  color: var(--primary);
+}
+.flip-card-front span .price-num::after {
+  content: " /Video";
+  position: absolute;
+  font-size: 0.5em;
+  bottom: 0;
+  color: var(--primary);
+}
+.flip-card-front a {
+  display: inline-block;
+  background: var(--primary);
+  color: #fff;
+  font-size: 25px;
+  padding: 12px 36px;
+ margin: 0px;
+  font-weight: 400;
+  border-radius: 6px;
+  border: 2px solid var(--primary);
+  transition: all 0.3s ease;
+}
+
+.flip-card-front a:hover {
+  color: var(--primary);
+  background: none;
+}
+
+
+
+
+
+
+
+
+/* profile pic part */
+
+.about-pic-div{
+  width: 100%;
+  height: 50vmin;
+  /* background-color: red; */
+  background-image: url('/images/aboutPic.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  /* border-radius: 20px; */
+ margin-bottom: 25px;
+ background-position: center;
+}
+
+
+
+
+
+
 /* responsive media query start */
 @media (max-width: 1104px) {
   /* .about .about-content .left img{
         height: 350px;
         width: 350px;
     } */
+    /* .about-profile-pic{
+      width: 4000px!important;
+      height: auto;
+     } */
 }
 
 @media (max-width: 991px) {
@@ -1154,6 +1358,9 @@ footer span a:hover {
   }
 }
 @media (max-width: 947px) {
+  .flip-card {
+    width: 50%;
+  }
   .menu-btn {
     display: block;
     z-index: 999;
@@ -1212,7 +1419,7 @@ footer span a:hover {
     width: calc(50% - 10px);
     margin-bottom: 20px;
   }
-  .price .price-content .card {
+  .price .price-content .card , .flip-card {
     width: calc(50% - 10px);
     margin-bottom: 20px;
   }
@@ -1265,22 +1472,22 @@ footer span a:hover {
   .services .serv-content .card {
     width: 100%;
   }
-  .price .price-content .card {
+  .price .price-content .card , .flip-card{
     width: 100%;
   }
   .project .project-div .vertical-sec,
   .project .project-div .horizontal-sec {
     grid-template-columns: 1fr;
   }
-  .about-profile-pic{
+  /* .about-profile-pic{
     width: 500px;
-  }
+  } */
 }
 
 @media (max-width: 500px) {
-  .about-profile-pic{
+  /* .about-profile-pic{
     width: 400px;
-  }
+  } */
   .home .home-content .text-2 {
     font-size: 50px;
   }
@@ -1310,19 +1517,9 @@ footer span a:hover {
     line-height: 38px;
   }
 }
-@media (max-width: 1800px) {
-  .about-profile-pic{
-    width: 820px;
-  }}
-@media (max-width: 850px) {
-  .about-profile-pic{
-    width: 650px;
-  }}
-@media (max-width: 430px) {
-  .about-profile-pic{
-    width: 350px;
-  }}
-  @media (max-width: 300px) {
-    .about-profile-pic{
-      width: 250px;
-    }}
+
+
+
+
+
+
