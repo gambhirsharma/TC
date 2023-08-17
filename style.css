@@ -3,6 +3,33 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Anton&family=Kalam&family=Lugrasimo&family=Pangolin&family=Tektur&display=swap");
 
+
+/* adding custom font */
+
+
+@font-face {
+  font-family: 'nasalizationregular';
+  src: url('nasalization-rg-webfont.woff2') format('woff2'),
+       url('nasalization-rg-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+
+@font-face {
+  font-family: 'nasalizationregular';
+  src: url('nasalization-rg-webfont.woff2') format('woff2'),
+       url('nasalization-rg-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+
+/* end here */
 * {
   margin: 0;
   padding: 0;
@@ -152,7 +179,7 @@ section .title::after {
   justify-content: space-between;
 }
 .navbar .logo a {
-  font-family: var(--TP-font5); /* 1-5 */
+  font-family: 'nasalizationregular', Arial, sans-serif; /* 1-5 */
   color: #fff;
   font-size: 35px;
   font-weight: 600;
@@ -550,8 +577,6 @@ section .title::after {
   min-height: 320px;
 }
 
-.project .project-div .vertical-sec .card {
-}
 
 .project .project-div .horizontal-sec {
   display: grid;
