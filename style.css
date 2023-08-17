@@ -9,8 +9,8 @@
 
 @font-face {
   font-family: 'nasalizationregular';
-  src: url('nasalization-rg-webfont.woff2') format('woff2'),
-       url('nasalization-rg-webfont.woff') format('woff');
+  src: url('/public/assets/webfontkit-20230816-191359/nasalization-rg-webfont.woff2') format('woff2'),
+       url('/public/assets/webfontkit-20230816-191359/nasalization-rg-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -36,6 +36,8 @@
   box-sizing: border-box;
   text-decoration: none;
 
+  font-family: 'nasalizationregular', arial, sans-serif;
+
   /* ############ ##### primary color section ############ #####  */
   /* --primary: crimson; */
   /* --primary: #008000; */
@@ -49,7 +51,8 @@
 
   /* Font */
   /* --font: "Ubuntu", sans-serif; */
-  --font: arial, sans-serif;
+  /* --font: arial, sans-serif; */
+  --font: 'nasalizationregular', arial, sans-serif;
   /* --font-2: ; */
   /* --font-3: ; */
   /* --font-4: ; */
@@ -95,6 +98,7 @@ html {
 body{
   background-color: var(--white-bg);
   /* background-image: radial-gradient( #00C0FF,#0073ff,#090979 ), radial-gradient(farthest-side,#00C0FF,#090979 ); */
+  font-family: 'nasalizationregular', arial, sans-serif;;
 }
 
 /* all similar content styling codes */
