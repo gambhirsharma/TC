@@ -290,7 +290,8 @@ section .title::after {
   background-image: linear-gradient(to bottom right, #008ab8, #090979);
   color: #fff;
   font-size: 25px;
-  padding: 12px 36px;
+  padding: 0px 36px;
+  padding-bottom: 10px;
   margin-top: 20px;
   font-weight: 400;
   border-radius: 6px;
@@ -678,7 +679,7 @@ section .title::after {
   overflow: hidden;
   transition: all 0.3s ease;
   color: #fff;
-  min-height: 470px;
+  min-height: 550px;
 }
 .testimony .carousel .card p {
   margin-top: 20px;
@@ -1231,6 +1232,7 @@ footer span a:hover {
     .flip-card-back li{
       text-align: left;
       list-style-type: circle;
+      font-size: .96em;
     }
     .flip-card button {
       all:unset;
