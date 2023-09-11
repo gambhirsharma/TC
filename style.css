@@ -384,14 +384,14 @@ section .title::after {
   /* background: radial-gradient( #1d36a8,#162a82,  transparent); */
   background-image: radial-gradient(
       circle at 20% 20%,
-      #1d36a8 10px,
-      #162a82 10px,
+      #1d36a8 0px,
+      #162a82 0px,
       transparent 20%
     ),
     radial-gradient(
       circle at 80% 50%,
-      #1d36a8 10px,
-      #162a82 10px,
+      #1d36a8 0px,
+      #162a82 0px,
       transparent 20%
     );
 }
