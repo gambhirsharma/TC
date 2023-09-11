@@ -136,46 +136,42 @@ function moreBtn() {
 // }
 
 var moreBtn = document.querySelectorAll(".moreBtn");
-var backBtn = document.querySelectorAll('.backBtn')
+var backBtn = document.querySelectorAll(".backBtn");
 var cards = document.querySelectorAll(".flip-card-inner");
 
 // for(let i=0; i>moreBtn.length; i++){
-    
+
 // }
 
 [...moreBtn].forEach((x, index) => {
   x.addEventListener("click", function () {
-     cards[index].classList.add('flipedCard');
+    cards[index].classList.add("flipedCard");
   });
 });
 
-[...backBtn].forEach((x,index)=>{
-    x.addEventListener('click', function(){
-    cards[index].classList.remove('flipedCard')
-    console.log('hello')
-    })
-})
+[...backBtn].forEach((x, index) => {
+  x.addEventListener("click", function () {
+    cards[index].classList.remove("flipedCard");
+    console.log("hello");
+  });
+});
 
-let tn  = document.querySelectorAll('.TN');
- [...tn].forEach((x,index)=>{
-   x.addEventListener('click', ()=>{
+let tn = document.querySelectorAll(".TN");
+[...tn].forEach((x, index) => {
+  x.addEventListener("click", () => {
     tn[index].style.display = "none";
-   })
- })
-
-
+  });
+});
 
 //  loader
-document.onreadystatechange = function() {
+document.onreadystatechange = function () {
   if (document.readyState !== "complete") {
-      document.querySelector(
-        "body").style.visibility = "hidden";
-      document.querySelector(
-        "#spinner").style.visibility = "visible";
+    document.querySelector("body").style.visibility = "hidden";
+    document.querySelector('body').style.overflow = "hidden"
+    document.querySelector("#spinner").style.visibility = "visible";
   } else {
-      document.querySelector(
-        "#spinner").style.display = "none";
-      document.querySelector(
-        "body").style.visibility = "visible";
+    document.querySelector("#spinner").style.display = "none";
+    document.querySelector("body").style.visibility = "visible";
+    document.querySelector('body').style.overflow = "scroll"
   }
 };
