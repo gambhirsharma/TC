@@ -100,7 +100,7 @@ body {
 
 /* all similar content styling codes */
 section {
-  padding: 100px 0;
+  padding: 50px 0;
 }
 .max-width {
   max-width: 1300px;
@@ -316,7 +316,7 @@ section .title::after {
     var(--primary),
     var(--primary-dark)
   );
-  -webkit-background-clip: text;
+  /* -webkit-background-clip: text; */
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 0.001px #008ab8;
 }
@@ -508,8 +508,9 @@ section .title::after {
   background: transparent;
   overflow: hidden;
 }
+ /* 
 .price {
-  /* background: radial-gradient( #1d36a8,#162a82,  transparent);
+ background: radial-gradient( #1d36a8,#162a82,  transparent);
     background-image: radial-gradient(
       circle at 35% 65%,
       #3ddaeb 200px,
@@ -519,9 +520,9 @@ section .title::after {
       circle at 80% 50%,
       #1d36a8 10px,
       #162a82 10px,
-      transparent 20%); */
+      transparent 20%); 
 }
-
+*/
 .price::before {
   content: "";
   display: flex;
