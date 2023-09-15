@@ -105,43 +105,10 @@ function moreBtn() {
   }
 }
 
-// function includeMore(){
-//     var cards = document.querySelector('.flip-card-inner');
-//     var button = document.getElementById("flipBtn");
-
-//     cards.classList.toggle('flipedCard')
-
-//     // [...cards].forEach((button)=>{
-//     //     button.addEventListener('click', function(){
-//     //         cards.classList.toggle('')
-//     //     })
-//     // })
-// }
-
-// function includeMore(){
-//     var flipCards = document.querySelectorAll('.flip-card-inner');
-
-// var flipMore = document.querySelectorAll('#flipMore');
-
-// // console.log(...flipCards)
-// [...flipCards].forEach((x)=>{
-//     x.classList.toggle('flipedCard')
-//     console.log(x)
-// })
-
-// }
-
-// function includeLess(){
-
-// }
-
 var moreBtn = document.querySelectorAll(".moreBtn");
 var backBtn = document.querySelectorAll(".backBtn");
 var cards = document.querySelectorAll(".flip-card-inner");
 
-// for(let i=0; i>moreBtn.length; i++){
-
-// }
 
 [...moreBtn].forEach((x, index) => {
   x.addEventListener("click", function () {
