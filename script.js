@@ -131,14 +131,14 @@ let tn = document.querySelectorAll(".TN");
 });
 
 //  loader
-document.onreadystatechange = function () {
-  if (document.readyState !== "complete") {
-    document.querySelector("body").style.visibility = "hidden";
-    document.querySelector('body').style.overflow = "hidden"
-    document.querySelector("#spinner").style.visibility = "visible";
-  } else {
-    document.querySelector("#spinner").style.display = "none";
-    document.querySelector("body").style.visibility = "visible";
-    document.querySelector('body').style.overflow = "scroll"
-  }
-};
+// document.onreadystatechange = function () {
+//   if (document.readyState !== "complete") {
+//     document.querySelector("body").style.visibility = "hidden";
+//     document.querySelector('body').style.overflow = "hidden"
+//     document.querySelector("#spinner").style.visibility = "visible";
+//   } else {
+//     document.querySelector("#spinner").style.display = "none";
+//     document.querySelector("body").style.visibility = "visible";
+//     document.querySelector('body').style.overflow = "scroll"
+//   }
+// };
