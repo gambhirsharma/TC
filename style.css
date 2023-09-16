@@ -295,7 +295,7 @@ section .title::after {
   position: absolute;
   bottom: 0;
   right: 10px;
-
+  z-index: 2;
   /* background-color: red; */
 }
 .home-model {
