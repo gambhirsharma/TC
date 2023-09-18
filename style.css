@@ -274,7 +274,7 @@ section .title::after {
   left: 0vmin;
   opacity: 1;
   background-size: contain;
-  background-image: url("/images/dots.png");
+  background-image: url("/images/dots.webp");
   overflow: hidden;
 }
 .home::after {
@@ -288,7 +288,7 @@ section .title::after {
   z-index: 1;
   opacity: 1;
   background-size: contain;
-  background-image: url("/images/dots.png");
+  background-image: url("/images/dots.webp");
   overflow: hidden;
 }
 .home-model-div {
@@ -523,7 +523,7 @@ section .title::after {
   position: absolute;
   top: -250px;
   left: -50px;
-  background-image: url("./images/wave.png");
+  background-image: url("./images/wave.webp");
   background-size: 100%;
   background-position-x: center;
   transform: rotate(20deg);
@@ -823,7 +823,7 @@ section .title::after {
   min-height: 550px;
 }
 .testimony .carousel .card p {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 .testimony .carousel .card:hover {
   /* background: var(--primary); */
@@ -866,6 +866,7 @@ section .title::after {
   align-items: center;
   justify-content: center;
   text-align: center;
+  margin-top: 5px;
 }
 
 .testimony .star-div svg {
@@ -1540,7 +1541,7 @@ footer span a:hover {
   width: 90%;
   aspect-ratio: 2/1.02;
   /* background-color: red; */
-  background-image: url("/images/aboutPic.jpg");
+  background-image: url("/images/aboutPic.webp");
   background-size: contain;
   background-repeat: no-repeat;
   overflow: hidden;
