@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/images/Logo.webp" type="image/x-icon" />
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- end -->
+    <title>Free Lut | TP</title>
+    <style>
+      @font-face {
+        font-family: "nasalizationregular";
+        src: url("/public/assets/webfontkit-20230816-191359/nasalization-rg-webfont.woff2")
+            format("woff2"),
+          url("/public/assets/webfontkit-20230816-191359/nasalization-rg-webfont.woff")
+            format("woff");
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      html {
+        --zoom: 120;
+        /* declaring variable here */
+        --black: #000;
+        --white: #fff;
+        --red: #d34747;
+        --green: #1c6f1c;
+        --blue: #2a2aaa;
+        --yellow: yellow;
+        --grey: grey;
+        --violet: violet;
+        --purple: purple;
+        --pink: pink;
+        --bg: #202020;
+        --primary: #04c0ff;
+        --blk-bg: #0e0d0d;
+      }
+      :root {
+        --unit: 1vmin;
+        --available-screen-min: 665;
+        --px: calc(var(--zoom) * (var(--unit) / var(--available-screen-min)));
+      }
+
+      /* custom scroll bar */
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+      ::-webkit-scrollbar-track {
+        all: unset;
+        background: var(--blk-bg);
+      }
+      ::-webkit-scrollbar-thumb {
+        background: var(--primary);
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+
+        font-family: "nasalizationregular", arial, sans-serif;
+        font-size: 16px;
+      }
+      *::after,
+      *::before {
+        content: "";
+        display: block;
+        position: relative;
+      }
+      head::before,
+      head::after,
+      body::before,
+      body::after,
+      html::before,
+      html::after {
+        content: "";
+        position: absolute;
+        background-repeat: no-repeat;
+
+        /* to make the animation smoother in chrome */
+        filter: blur(0);
+      }
+      body {
+        all: unset;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding-bottom: 60px;
+        padding-top: 30px;
+        color: #fff;
+
+/* background  */
+background:#162a82 ;
+    background-image: radial-gradient( circle at 75% 60%, #1d36a8 0px, #162a82 0px, transparent 20% ), radial-gradient( circle at 25% 40%, #1d36a8 0px, #162a82 0px, transparent 20% );
+/* background */
+
+      }
+      div.comparison {
+        width: calc(600 * var(--px));
+        aspect-ratio: 1.7;
+        min-width: 300px;
+        min-height: 100px;
+        overflow: hidden;
+        margin-top: 50px;
+      }
+      div.comparison figure {
+        background-size: cover;
+        position: relative;
+        font-size: 0;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        
+      }
+      div.comparison figure > img {
+        position: relative;
+        width: 100%;
+      }
+      div.comparison figure div {
+        background-size: cover;
+        position: absolute;
+        background-repeat: no-repeat;
+        width: 50%;
+        box-shadow: 0 5px 10px -2px rgba(0, 0, 0, 0.3);
+        overflow: hidden;
+        bottom: 0;
+        height: 100%;
+        border-right: solid #fff;
+      }
+
+      input[type="range"] {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        position: relative;
+        top: -2rem;
+        left: -1%;
+        background-color: rgba(255, 255, 255, 0.1);
+        width: 102%;
+      }
+      input[type="range"]:focus {
+        outline: none;
+      }
+      input[type="range"]:active {
+        outline: none;
+      }
+
+      input[type="range"]::-moz-range-track {
+        -moz-appearance: none;
+        height: 15px;
+        width: 98%;
+        background-color: rgba(255, 255, 255, 0.1);
+        position: relative;
+        outline: none;
+      }
+      input[type="range"]::active {
+        border: none;
+        outline: none;
+      }
+      input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 20px;
+        height: 15px;
+        background: #fff;
+        border-radius: 0;
+      }
+      input[type="range"]::-moz-range-thumb {
+        -moz-appearance: none;
+        width: 20px;
+        height: 15px;
+        background: #fff;
+        border-radius: 0;
+      }
+      input[type="range"]:focus::-webkit-slider-thumb {
+        background: rgba(255, 255, 255, 0.5);
+      }
+      input[type="range"]:focus::-moz-range-thumb {
+        background: rgba(255, 255, 255, 0.5);
+      }
+
+      .lut-desc {
+        display: flex;
+        width: calc(600 * var(--px));
+        padding: 20px 10px;
+      }
+      .lut-desc h1 {
+        color: #fff;
+        font-size: 2rem;
+      }
+      button {
+        all: unset;
+        padding: 10px;
+        border: 2px solid var(--primary);
+        border-radius: 10px;
+        color: var(--primary);
+        margin-left: 30px;
+      }
+      button:hover {
+        cursor: pointer;
+        background-color: var(--primary);
+        color: #fff;
+      }
+
+      nav{
+        width: calc(600 * var(--px));
+        padding: 20px 10px;
+      }
+      nav h1 , nav i{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        margin:0 10px;
+      }
+      nav p{
+        display: flex;
+        padding: 0px 40px;
+      }
+footer{
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+      footer button {
+        margin: 20px 0px;
+      }
+
+      /* adding all the images */
+      figure.first {
+        background-image: url(images/lut/PIC_1_B.jpg);
+      }
+      figure.first div {
+        background-image: url(images/lut/PIC_1_A.jpg);
+      }
+
+      figure.second {
+        background-image: url(images/lut/PIC_2_B.jpg);
+      }
+      figure.second div {
+        background-image: url(images/lut/PIC_2_A.jpg);
+      }
+
+      figure.third {
+        background-image: url(images/lut/PIC_3_B.jpg);
+      }
+      figure.third div {
+        background-image: url(images/lut/PIC_3_A.jpg);
+      }
+
+      figure.fourth {
+        background-image: url(images/lut/PIC_4_B.jpg);
+      }
+      figure.fourth div {
+        background-image: url(images/lut/PIC_4_A.jpg);
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <h1>
+        <i class="fa-solid fa-eye-dropper"></i>
+        Samples
+      </h1>
+      <p>We provide premium lut to our visitors to the website. Feel free to download them and use it in your work flow.</p>
+    </nav>
+    <!-- first image -->
+    <div class="comparison">
+      <figure class="first">
+        <div class="divisor"></div>
+      </figure>
+      <input
+        type="range"
+        min="0"
+        max="100"
+        value="50"
+        class="slider"
+        oninput="moveDivisor()"
+      />
+    </div>
+    <span class="lut-desc">
+      <h1>Nightly text</h1>
+      <button>Download</button>
+    </span>
+    <!-- second image -->
+    <div class="comparison">
+      <figure class="second">
+        <div class="divisor"></div>
+      </figure>
+      <input
+        type="range"
+        min="0"
+        max="100"
+        value="50"
+        class="slider"
+        oninput="moveDivisor()"
+      />
+    </div>
+    <span class="lut-desc">
+      <h1>Nightly text</h1>
+      <button>Download</button>
+    </span>
+    <!-- third image -->
+    <div class="comparison">
+      <figure class="third">
+        <div class="divisor"></div>
+      </figure>
+      <input
+        type="range"
+        min="0"
+        max="100"
+        value="50"
+        class="slider"
+        oninput="moveDivisor()"
+      />
+    </div>
+    <span class="lut-desc">
+      <h1>Nightly text</h1>
+      <button>Download</button>
+    </span>
+    <!-- fourth image -->
+    <div class="comparison">
+      <figure class="fourth">
+        <div class="divisor"></div>
+      </figure>
+      <input
+        type="range"
+        min="0"
+        max="100"
+        value="50"
+        class="slider"
+        oninput="moveDivisor()"
+      />
+    </div>
+    <span class="lut-desc">
+      <h1>Nightly text</h1>
+      <button>Download</button>
+    </span>
+    <footer>
+      <p>All lut are free of copyright.</p>
+      <button>Download all</button>
+    </footer>
+    <!-- script start here -->
+    <script>
+      // var divisor = document.getElementById("divisor"),
+      //   slider = document.getElementById("slider");
+      // function moveDivisor() {
+      //   divisor.style.width = slider.value + "%";
+      // }
+
+      // var divisor = document.querySelectorAll(".divisor"),
+      //   slider = document.querySelectorAll(".slider");
+      //   console.log(slider)
+      // function moveDivisor() {
+      //   [...divisor].style.width = [...slider].value + "%";
+      // }
+
+      var divisors = document.querySelectorAll(".divisor");
+      var sliders = document.querySelectorAll(".slider");
+
+      function moveDivisor() {
+        for (var i = 0; i < divisors.length; i++) {
+          divisors[i].style.width = sliders[i].value + "%";
+        }
+      }
+
+      // Attach an event listener to each slider to trigger the moveDivisor function when the value changes
+      for (var i = 0; i < sliders.length; i++) {
+        sliders[i].addEventListener("input", moveDivisor);
+      }
+    </script>
+  </body>
+</html>
