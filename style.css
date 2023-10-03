@@ -301,7 +301,22 @@ section .title::after {
 .home-model {
   width: 100vmin;
   aspect-ratio: 1/1;
+  animation: modelScale 1s linear;
 }
+
+@keyframes modelScale {
+  0%{
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  50%{
+ transform: scale(1.01);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
 .home-ai-text {
   background: -webkit-linear-gradient(
     45deg,
