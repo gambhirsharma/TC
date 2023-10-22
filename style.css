@@ -1359,7 +1359,7 @@ footer span a:hover {
 .flip-card {
   background-color: transparent;
   width: calc(33% - 20px);
-  height: 500px;
+  height: 580px;
   perspective: 1000px;
 }
 .flip-card-inner {
@@ -1397,6 +1397,10 @@ footer span a:hover {
   border: 6px solid rgba(255, 255, 255, 0.18);
   color: #fff;
   padding: 25px 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .flip-card-front:hover {
   background-color: var(--card-hover-color);
@@ -1408,10 +1412,20 @@ footer span a:hover {
   color: #aaaaaa;
   transform: rotateY(180deg);
   padding: 2vmin 1.5vmin;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 .flip-card-back:hover {
   cursor: pointer;
   background-color: var(--card-hover-color);
+}
+.flip-card-back ul{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding-left: 14px;
 }
 .flip-card-back li {
   text-align: left;
@@ -1693,6 +1707,12 @@ footer span a:hover {
 }
 
 @media (max-width: 690px) {
+
+  .trusted-company{
+    display: flex;
+    flex-direction: column;
+  }
+
   .contact .contact-content {
     display: flex;
     flex-direction: column;

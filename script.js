@@ -109,7 +109,6 @@ var moreBtn = document.querySelectorAll(".moreBtn");
 var backBtn = document.querySelectorAll(".backBtn");
 var cards = document.querySelectorAll(".flip-card-inner");
 
-
 [...moreBtn].forEach((x, index) => {
   x.addEventListener("click", function () {
     cards[index].classList.add("flipedCard");
@@ -119,7 +118,6 @@ var cards = document.querySelectorAll(".flip-card-inner");
 [...backBtn].forEach((x, index) => {
   x.addEventListener("click", function () {
     cards[index].classList.remove("flipedCard");
-    console.log("hello");
   });
 });
 
@@ -142,3 +140,11 @@ let tn = document.querySelectorAll(".TN");
 //     document.querySelector('body').style.overflow = "scroll"
 //   }
 // };
+console.log(
+  "Made by:\n",
+  " ____                 _     _     _ \n" +
+  " / ___| __ _ _ __ ___ | |__ | |__ (_)_ __ \n" +
+  "| |  _ / _` | '_ ` _ \\| '_ \\| '_ \\| | '__| \n" +
+  "| |_| | (_| | | | | | | |_) | | | | | | \n" +
+  " \\____|\\__,_|_| |_| |_|_.__/|_| |_|_|_|  \n"
+);
