@@ -1358,9 +1358,10 @@ footer span a:hover {
 /* price card section ############################################################################*/
 .flip-card {
   background-color: transparent;
-  width: calc(33% - 20px);
+  width: calc(40% - 20px);
   height: 580px;
   perspective: 1000px;
+  margin: 0px 20px;
 }
 .flip-card-inner {
   position: relative;
@@ -1619,6 +1620,7 @@ footer span a:hover {
 @media (max-width: 947px) {
   .flip-card {
     width: 50%;
+    margin: 0px;
   }
   .menu-btn {
     display: block;
